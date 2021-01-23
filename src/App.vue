@@ -1,15 +1,15 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <test/>
+
+  <section class="nav-section">
+    <router-link to="/">Home</router-link>
+    <div class="split-string">|</div>
+    <router-link to="/HelloWorld">HelloWorld</router-link>
+  </section>
+  <router-view />
 </template>
 
 <script>
-import test from './components/test.vue'
-
 export default {
-  name: 'App',
-  components: {
-    test
-  }
+  name: 'App'
 }
 </script>
