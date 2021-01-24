@@ -1,5 +1,6 @@
 <template>
-  <h1>Just a test.</h1>
+  <h1>Welcome</h1>
+  <p>Just a test.</p>
 </template>
 
 <script>
