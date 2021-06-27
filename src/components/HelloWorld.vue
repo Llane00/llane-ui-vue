@@ -1,6 +1,6 @@
 <template>
   <h1>{{ msg }}</h1>
-  <button @click="count++">count is: {{ count }}</button>
+  <button @click="countPlus">count is: {{ count }}</button>
   <p>Edit <code>components/HelloWorld.vue</code> to test hot module replacement.</p>
 </template>
 
@@ -13,6 +13,11 @@ export default {
   data() {
     return {
       count: 0
+    }
+  },
+  methods: {
+    countPlus(){
+      this.count++;
     }
   }
 }
