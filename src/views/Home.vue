@@ -1,9 +1,6 @@
 <template>
   <div>
-    <div class="topnav">
-      <div class="logo"></div>
-      <div class="menu"></div>
-    </div>
+    <Topnav />
     <div class="banner">
       <h1>llane UI</h1>
       <h2>一个超级轻便的ui，开箱即用。</h2>
@@ -15,9 +12,16 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
-  .topnav {
-    border: 1px solid;
+<script lang="ts">
+import Topnav from '../components/Topnav.vue';
+
+export default {
+  components: {
+    Topnav
   }
+}
+</script>
+
+<style lang="scss" scoped>
   
 </style>
