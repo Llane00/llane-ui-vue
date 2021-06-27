@@ -19,7 +19,9 @@
           </li>
         </ol>
       </aside>
-      <main>主内容</main>
+      <main>
+        <router-view></router-view>
+      </main>
     </div>
   </div>
 </template>
@@ -44,13 +46,9 @@ export default {
 
 <style lang="scss">
   .content {
-    position: fixed;
-    top: 3.6rem;
-    left: 0;
-    display: flex;
-    justify-content: space-between;
-
     aside {
+      position: fixed;
+      top: 3.6rem;
       padding: 1.5rem 0;
       width: 20rem;
       text-align: left;
@@ -71,9 +69,13 @@ export default {
     }
 
     main {
-      margin: 0 auto;
-      padding: 0 1.5rem 4rem;
+      margin-left: 20rem;
+      padding: 3.6rem 1.5rem 4rem;
       max-width: 48rem;
+
+      @media (max-width: 500px) {
+        margin-left: 0;
+      }
     }
   }
 </style>

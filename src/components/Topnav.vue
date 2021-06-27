@@ -38,6 +38,7 @@ export default {
     align-items: center;
     padding: .7rem 1.5rem;
     height: 3.6rem;
+    background: #fff;
     border-bottom: 1px #eee solid;
     box-sizing: border-box;
 
