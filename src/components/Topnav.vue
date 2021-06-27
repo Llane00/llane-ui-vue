@@ -1,6 +1,7 @@
 <template>
   <div class="topnav">
-    <div class="logo" @click="toggleMenu">llane-ui</div>
+    <div class="toggleAside" @click="toggleMenu">切换</div>
+    <div class="logo">llane-ui</div>
     <ul class="menu">
       <li>菜单1</li>
       <li>菜单2</li>
@@ -40,6 +41,14 @@ export default {
     border-bottom: 1px #eee solid;
     box-sizing: border-box;
 
+    .toggleAside {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      transform: translateY(-50%);
+    }
+
     .logo {
       cursor: pointer;
     }
@@ -49,6 +58,20 @@ export default {
 
       li {
         margin-left: 1rem;
+      }
+    }
+
+    @media (max-width:500px) {
+      > .menu {
+        display: none;
+      }
+
+      > .toggleAside {
+        display: inline-block;
+      }
+      
+      > .logo {
+        margin: auto;
       }
     }
   }
