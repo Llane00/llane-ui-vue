@@ -1,6 +1,6 @@
 <template>
   <div class="topnav">
-    <div class="logo"></div>
+    <div class="logo" @click="toggleMenu">llane-ui</div>
     <ul class="menu">
       <li>菜单1</li>
       <li>菜单2</li>
@@ -9,7 +9,20 @@
 </template>
 
 <script lang="ts">
+import { inject, Ref } from 'vue';
+
 export default {
+  setup() {
+    const menuVisible = inject<Ref<Boolean>>('menuVisible');
+
+    const toggleMenu = function () {
+      menuVisible.value = !menuVisible.value;
+    }
+
+    return {
+      toggleMenu
+    }
+  }
 }
 </script>
 
@@ -26,6 +39,10 @@ export default {
     height: 3.6rem;
     border-bottom: 1px #eee solid;
     box-sizing: border-box;
+
+    .logo {
+      cursor: pointer;
+    }
 
     .menu {
       display: flex;
